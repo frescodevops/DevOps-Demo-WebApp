@@ -55,5 +55,23 @@ pipeline {
       }
     }
 
+    stage('Deploy to PROD') {
+      steps {
+        echo 'Launch in PROD'
+      }
+    }
+
+    stage('Slack Notification-Prod') {
+      steps {
+        echo 'Notify on Slack'
+      }
+    }
+
+    stage('Sanity-Test') {
+      steps {
+        echo 'Sanity Test'
+      }
+    }
+
   }
 }
